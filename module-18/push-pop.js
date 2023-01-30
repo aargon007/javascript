@@ -1,0 +1,10 @@
+const numbers = [23, 55, 83, 30, 90];
+numbers.pop();
+// console.log(numbers);
+numbers.push(000);
+console.log(numbers);
+// const numbers = [30, 80, 90, 20,44, 88];
+numbers.shift();
+console.log(numbers);
+numbers.unshift(10000);
+console.log(numbers);
