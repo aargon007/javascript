@@ -46,8 +46,9 @@ function areaRectangle(l,h){
 console.log(areaRectangle(6,9));
 
 //practice problem 5: find second largest number in Array
-const numList = [ 99, 55, 2, 79, 550, 220];
-numList.sort(function(a,b){
+const numList = [ 99, 55,550, 2, 79, 550, 220];
+const dupNumList = [...new Set(numList)]
+dupNumList.sort(function(a,b){
     return b-a;
 })
-console.log(numList[1]); // second largest number
+console.log(dupNumList[1]); // second largest number
