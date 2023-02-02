@@ -4,6 +4,16 @@ function reverseString(word) {
 }
 console.log(reverseString("hello"));
 
+//reverse text string function 
+function reverseStrings(text){
+    let reversed = "";
+    for  (let i = text.length-1; i >= 0; i++){
+        const element = text[i];
+        reversed = reversed + element;
+    }
+    return reversed;
+}
+
 
 // detect vowel and consonant
 function solution(letter){
