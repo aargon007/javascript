@@ -48,16 +48,16 @@
 
 // const friends = ["rahima", "karim", "heroAlam", "abdullahh", "samsed"];
 
-// function largeName(array) {
-//   let longest = "";
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i].length > longest.length) {
-//       longest = array[i];
-//     }
-//   }
-//   return `longest friend name is : ${longest}`
-// }
-// console.log(largeName(friends));
+function largeName(array) {
+  let longest = "";
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > longest.length) {
+      longest = array[i];
+    }
+  }
+  return `longest friend name is : ${longest}`
+}
+console.log(largeName(friends));
 
 
 /* .................... remove duplicate element from an array ............... */
