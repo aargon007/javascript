@@ -320,16 +320,12 @@ console.log(findOddSum(myOddNums));
 /* ........................ problem 22 : Find the second largest........................ */
 
 function secondLargest ( numbers ){
-  const large = [];
-  for(let i = 0; i < numbers.length; i++){
-      numbers.sort(function(a,b){
-          return b-a;
-      });
-      large.push(numbers[i]);
-  }
-  return large[1];
+  numbers.sort(function(a,b){
+      return b-a;
+  })
+return numbers[1];
 }
-const secLarge = [10,33,99,5,5,99,6];
+const secLarge = [10,33,99,5,609,5,99,6];
 console.log(secondLargest(secLarge));
 
 
