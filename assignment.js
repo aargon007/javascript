@@ -91,3 +91,31 @@ function findingBadData(arr){
 console.log(findingBadData([ -4, -9, -5, -33, -55 ]));
 
 
+/* Problem 5: Convert your gems into diamond
+তোমাকে একটা function দেওয়া হবে called gemsToDiamond(). এটা ইনপুট হিসেবে তিনটা number ( তোমাদের ৩ বন্ধুর gems এর সংখ্যা ) নিবে। 
+১ম বন্ধুর প্রতি gems এর ক্ষমতা = 21
+২য় বন্ধুর প্রতি gems এর ক্ষমতা = 32
+৩য় বন্ধুর প্রতি gems এর ক্ষমতা = 43
+[ gems এর ক্ষমতা বলতে একটা gems কে কয়টা diamond এ convert করা যাবে সেটা বুঝানো হচ্ছে। ]
+এখন তোমার task: সব বন্ধুর gems মিলিয়ে total কতটি diamond পাবে সেটা বের করতে হবে। total diamond এর সংখ্যা যদি 1000 এর দিগুন এর উপর হয়ে যায় সেক্ষেত্রে total diamond থেকে 2000 বাদ দিয়ে যতগুলো diamond অবশিষ্ট থাকবে, ততগুলো তোমরা পাবে।
+Input: 1, 1, 1     Output: 96
+Input: 20, 200, 50   Output: 6970
+Input: 100, 5, 1      Output: 303 */
+
+function gemsToDiamond(gemsNum1, gemsNum2, gemsNum3){
+    const gemsPower1 = 21;
+    const gemsPower2 = 32;
+    const gemsPower3 = 43;
+    if(typeof gemsNum1 === "number" && typeof gemsNum2 === "number" && typeof gemsNum3 === "number"){
+        let totalDiamond = gemsNum1*gemsPower1 + gemsNum2*gemsPower2 + gemsNum3*gemsPower3;
+        if(totalDiamond > 1000*2){
+            let remainingDiamond = totalDiamond - 2000;
+            return remainingDiamond;
+        } else {
+            return totalDiamond;
+        }
+    } else {
+        return "All input should be number.";
+    }
+}
+console.log(gemsToDiamond(100,5,1));
