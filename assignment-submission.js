@@ -54,7 +54,7 @@ function findingBadData(arr){
         const badData = [];
         for(let i = 0; i < arr.length; i++){
             const element = arr[i];
-            if(element < 0){
+            if(element < 0 && typeof element === "number"){
                 badData.push(element);
             }
         }

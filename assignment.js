@@ -83,7 +83,7 @@ function findingBadData(arr){
         const badData = [];
         for(let i = 0; i < arr.length; i++){
             const element = arr[i];
-            if(element < 0){
+            if(element < 0 && typeof element === "number"){
                 badData.push(element);
             }
         }
@@ -92,7 +92,7 @@ function findingBadData(arr){
         return "Input should be Array!";
     }
 }
-console.log(findingBadData([ -4, -9, -5, -33, -55 ]));
+console.log(findingBadData([2, -5, -7, -13]));
 
 
 /* Problem 5: Convert your gems into diamond
