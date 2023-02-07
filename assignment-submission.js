@@ -31,7 +31,8 @@ function evenOdd(str){
 
 
 
-/* function that checks if the number is less or greater than seven. if lower then return the result otherwise double it */
+/* function that checks if the number is less or greater than seven. 
+if lower then return the result otherwise double it */
 function isLGSeven(number){
     if(typeof number === "number"){
         let subtractionResult = number - 7;
@@ -81,6 +82,6 @@ function gemsToDiamond(gemsNum1, gemsNum2, gemsNum3){
             return totalDiamond;
         }
     } else {
-        return "Please provide three valid numbers!";
+        return "Please provide three valid numbers as parameter!";
     }
 }
