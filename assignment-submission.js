@@ -1,4 +1,4 @@
-/* simple mindGame function. it calcultes mathmatical BODMAS according to requirements. */
+/* simple mindGame function that takes number as input. it calcultes mathmatical BODMAS according to requirements. */
 function mindGame(num){
     if(typeof num === "number"){
         if(num > 0){
