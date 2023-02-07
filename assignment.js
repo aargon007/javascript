@@ -6,20 +6,20 @@ Input: 50 Output: 75
 Input: 33  Output: 49.5 */ 
 
 
-//simple mindGame function. it calcultes mathmatical BODMAS according to requirements.
+/* simple mindGame function. it calcultes mathmatical BODMAS according to requirements. */
 function mindGame(num){
     if(typeof num === "number"){
         if(num > 0){
             let result = (((num * 3) + 10 ) / 2) - 5;
             return result;
         } else {
-            return "Please provide a positive number.";
+            return "Please provide a positive number!";
         }
     } else {
-        return "Input is not a number.";
+        return "Input should be a number!";
     }
 }
-console.log(mindGame(33));
+console.log(mindGame(5));
 
 
 
@@ -31,7 +31,7 @@ Input: ‘Phero’   Output: odd
 Input: ‘Batch7’  Output: even
 Input: ‘chatgpt’  Output: odd */
 
-// evenOdd() function that checks if a string length is even or odd.
+/* evenOdd() function that checks if a string length is even or odd. */
 function evenOdd(str){
     if(typeof str === "string"){
         if(str.length % 2 === 0){
@@ -40,10 +40,10 @@ function evenOdd(str){
             return "odd";
         }
     } else {
-        return "Please provide a string character.";
+        return "Please provide a string character!";
     }
 }
-console.log(evenOdd("chatgpt"));
+console.log(evenOdd("phero"));
 
 
 
@@ -53,7 +53,7 @@ Input : 6  Output: -1
 Input: -15  Output: -22
 Input: 15  Output: 30 */
 
-//function that checks if the number is less or greater than seven. if lower then return the result otherwise double it
+/* function that checks if the number is less or greater than seven. if lower then return the result otherwise double it */
 function isLGSeven(number){
     if(typeof number === "number"){
         let subtractionResult = number - 7;
@@ -63,7 +63,7 @@ function isLGSeven(number){
             return number * 2;
         }
     } else {
-        return "Input should be a number.";
+        return "Please provide a valid number!";
     }
 }
 console.log(isLGSeven(15));
@@ -77,16 +77,20 @@ Input: [ 2, -5, -7, -13 ] Output: 3
 Input: [ -4, -9, -5, -33, -55 ] Output: 5 */
 
 
-//function that returns negative numbers length from an arrray.
+/* function that takes array as input and returns negative numbers length from an arrray. */
 function findingBadData(arr){
-    const badData = [];
-    for(let i = 0; i < arr.length; i++){
-        const element = arr[i];
-        if(element < 0){
-            badData.push(element);
+    if(Array.isArray(arr) === true){
+        const badData = [];
+        for(let i = 0; i < arr.length; i++){
+            const element = arr[i];
+            if(element < 0){
+                badData.push(element);
+            }
         }
+        return badData.length;
+    } else {
+        return "Input should be Array!";
     }
-    return badData.length;
 }
 console.log(findingBadData([ -4, -9, -5, -33, -55 ]));
 
@@ -102,20 +106,21 @@ Input: 1, 1, 1     Output: 96
 Input: 20, 200, 50   Output: 6970
 Input: 100, 5, 1      Output: 303 */
 
+/* gemsToDiamond function that takes three number parameter as input(gems number) and multiply with gems power number then return as diamond number. */
 function gemsToDiamond(gemsNum1, gemsNum2, gemsNum3){
     const gemsPower1 = 21;
     const gemsPower2 = 32;
     const gemsPower3 = 43;
     if(typeof gemsNum1 === "number" && typeof gemsNum2 === "number" && typeof gemsNum3 === "number"){
         let totalDiamond = gemsNum1*gemsPower1 + gemsNum2*gemsPower2 + gemsNum3*gemsPower3;
-        if(totalDiamond > 1000*2){
+        if(totalDiamond >= 1000*2){
             let remainingDiamond = totalDiamond - 2000;
             return remainingDiamond;
         } else {
             return totalDiamond;
         }
     } else {
-        return "All input should be number.";
+        return "Please provide three valid numbers!";
     }
 }
 console.log(gemsToDiamond(100,5,1));
